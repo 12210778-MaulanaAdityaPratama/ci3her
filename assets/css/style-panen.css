@@ -1,0 +1,260 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    cursor: default;
+	font-family: 'Roboto',sans-serif;
+}
+#check{
+    display: none;
+}
+#btn{
+    display: grid;
+    align-items: center;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 1000;
+    color: white;
+    text-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 6px black;
+    z-index: 2;
+    position: fixed;
+    width: 50px;
+    height: 100%;
+    top: 0;
+    background-color: rgba(128, 128, 128, 0);
+    transition: all 800ms ease 0s;
+}
+#check:checked ~ label #btn{
+    width: 300px;
+    color: #201c1500;
+    text-shadow: none;
+    box-shadow: none;
+}
+#check:checked ~ .sidebar .user{
+    left: 0;
+    transition: all 800ms ease 0s;
+}
+#check:checked ~ .sidebar{
+    left: 0;
+    transition: all 800ms ease 0s;
+}
+#check:checked ~ .sidebar ul li{
+    margin-left: 20px;
+}
+label #cancel{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0);
+	z-index: 3;
+	position: fixed;
+}
+#check:checked ~ label #cancel{
+	left: 0;
+	display: block;
+}
+.sidebar{
+	z-index: 4;
+	position: fixed;
+	width: 300px;
+    left: -300px;
+	height: 100%;
+	background: #fff;
+	transition: .2s ease-in;
+}
+.sidebar img{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+}
+.sidebar ul li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.sidebar ul li a{
+	font-size: 15px;
+    color: #201c15;
+    border-radius: 20px;
+    border: 1px solid rgb(210, 210, 210);
+    transition: .2s;
+    padding: 10px 20px;
+    display: flex;
+}
+.sidebar-bg{
+    background: url(https://img.freepik.com/free-photo/jasmine-rice_74190-7259.jpg?w=1380&t=st=1668355327~exp=1668355927~hmac=c962656fe6fa0c512a165908e1aee5cdd3c25eca21c37c4ecdad10b9975b6a5d);
+    background-size: cover;
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    top: 0;
+    left: 0;
+}
+.sidebar-bgs{
+    z-index: 1;
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.481);
+}
+.sidebar #b1{
+    transition: all 800ms ease .1s;
+}
+.sidebar #b2{
+    transition: all 800ms ease .4s;
+}
+.sidebar #b3{
+    transition: all 800ms ease .7s;
+}
+.sidebar a:hover{
+    background: rgb(238, 234, 226);
+	margin-left: 5px;
+}
+.user{
+    z-index: 1000;
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.user .name{
+    font-size: 20px;
+	margin-top: 15px;
+	font-weight: bold;
+}
+.user i{
+    padding: 10px 0px;
+    font-size: 50px;
+}
+.user .nim{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.header{
+    background: rgba(255, 255, 255, 0.911);
+    color: #000;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-size: cover;
+    transition: 0.6s;
+    padding: 30px 100px;
+}
+.header.bar{
+    padding: 15px 100px;
+    background: rgba(0, 0, 0, 0.911);
+    color: white;
+    position: fixed;
+}
+.header.bar h2,
+.header.bar ul li a{
+    color: rgb(194, 194, 194);
+    transition: 0s;
+}
+.header.bar h2,
+.header.bar ul li a:hover{
+    color: #fff;
+}
+.header h2{
+    font-family: 'Maiandra GD';
+    position: relative;
+    text-decoration: none;
+    transition: 0.6s;
+    text-transform: uppercase;
+}
+.header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header ul li{
+    position: relative;
+    list-style: none;
+}
+.header ul li a{
+    padding: 20px;
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 2px;
+    transition: 0s;
+}
+.header ul li a:hover{
+    color: rgb(174, 174, 174);
+}
+.slide{
+    z-index: 1000;
+    position: relative;
+    margin-top: 150px;
+    color: #fff;
+    margin-inline: 10%;
+    background: rgb(255, 0, 0);
+    padding: 0px 0px 100px 0px;
+    border-radius: 7px;
+}
+.input{
+    background: rgb(247, 226, 184);
+    width: max-content;
+    color: #000;
+    height: auto;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 7px;
+}
+
+
+
+
+.slide h4{
+    width: 100%;
+    height: auto;
+    padding: 7px 10px;
+    background: rgb(238, 234, 226);
+    color: #000;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+table{
+    margin-left: 30px;
+}
+table th{
+    padding: 3px 20px 3px 5;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+.wall{
+    background: url(https://img.freepik.com/free-photo/piece-golden-rice-rice-waiting-be-harvested_1205-11336.jpg?w=1380&t=st=1668351517~exp=1668352117~hmac=f0eef016bfc4224e1e08bf9a93136e08c95c04895b0f7eb7cdd98ad191c1ffaf);
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.walls{
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 2000px;
+    background: rgba(0, 0, 0, 0.619);
+}
+.atas{
+    position: relative;
+    z-index: 1001;
+}
